@@ -1,742 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="-YOWeq9EQky0oXAohQ1wGxFwqMcFCveyKpiT0K_6J4o" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mediterranean Diet Complete Guide & Meal Plans</title>
-    <meta name="description" content="Discover the complete beginner's guide to the Mediterranean Diet. Learn benefits, meal plans, food list, and healthy recipes.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Mediterranean Diet - Healthy Meal Plans & Recipes</title>
+    <meta name="description" content="Discover healthy Mediterranean diet recipes, complete meal plans, food guides, and tips for weight loss and long-term vitality.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-green: #2C5E3B;
-            --secondary-green: #4A7C59;
-            --accent-olive: #6B8E23;
-            --bg-cream: #FDFBF7;
-            --bg-card: #FFFFFF;
+            --accent-gold: #E6A100;
+            --bg-light: #FDFBF7;
             --text-dark: #2B2D42;
             --text-muted: #6C757D;
-            --border-color: #E9ECEF;
             --white: #FFFFFF;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            --transition: all 0.3s ease;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.8; font-size: 16px; }
+        
+        header { background: var(--white); border-bottom: 1px solid #EAEAEA; padding: 20px 0; text-align: center; }
+        .logo { color: var(--primary-green); font-size: 24px; font-weight: 800; text-decoration: none; }
 
-        body {
-            background-color: var(--bg-cream);
-            color: var(--text-dark);
-            line-height: 1.6;
-            padding-bottom: 70px; /* Space for mobile sticky CTA */
-        }
+        .hero { text-align: center; padding: 60px 20px 40px; max-width: 800px; margin: 0 auto; }
+        .hero h1 { color: var(--primary-green); font-size: 36px; font-weight: 800; margin-bottom: 15px; line-height: 1.3; }
+        .hero p { color: var(--text-muted); font-size: 18px; margin-bottom: 25px; }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        /* Article Card Section */
+        .section-title { color: var(--primary-green); font-size: 28px; margin: 40px 0 25px; text-align: center; font-weight: 700; }
+        
+        .article-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #EAEAEA; display: flex; flex-wrap: wrap; margin-bottom: 50px; }
+        .article-card-img { flex: 1 1 300px; max-height: 320px; overflow: hidden; }
+        .article-card-img img { width: 100%; height: 100%; object-fit: cover; }
+        .article-card-content { flex: 2 1 400px; padding: 35px; display: flex; flex-direction: column; justify-content: center; }
+        .article-tag { color: var(--accent-gold); font-weight: 700; font-size: 13px; text-transform: uppercase; margin-bottom: 10px; }
+        .article-card h2 { color: var(--primary-green); font-size: 24px; margin-bottom: 12px; line-height: 1.4; border: none; padding: 0; }
+        .article-card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
+        .btn-read { display: inline-block; background: var(--primary-green); color: var(--white); padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 14px; transition: background 0.2s; }
+        .btn-read:hover { background: #1E4329; }
 
-        /* TOP ANNOUNCEMENT BANNER */
-        .top-notice {
-            background: #1B3B24;
-            color: #E2F1E7;
-            text-align: center;
-            padding: 10px 15px;
-            font-size: 14px;
-            font-weight: 500;
-        }
+        /* CTA Section */
+        .cta-box { background: linear-gradient(135deg, #2C5E3B 0%, #1E4329 100%); color: var(--white); padding: 40px 20px; border-radius: 20px; text-align: center; margin: 40px 0 60px; }
+        .cta-box h3 { color: var(--white); margin-bottom: 12px; font-size: 24px; }
+        .cta-box p { color: #E0E0E0; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .btn-cta { display: inline-block; background: var(--accent-gold); color: #000; font-weight: 700; padding: 16px 32px; border-radius: 30px; text-decoration: none; text-transform: uppercase; font-size: 15px; }
 
-        .top-notice a {
-            color: #A3E635;
-            text-decoration: underline;
-            font-weight: 700;
-            margin-left: 5px;
-        }
+        footer { text-align: center; padding: 30px 20px; color: var(--text-muted); border-top: 1px solid #EAEAEA; font-size: 14px; }
 
-        /* HEADER & NAVIGATION */
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 75px;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--primary-green);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a, .nav-links button {
-            font-weight: 500;
-            color: var(--text-dark);
-            transition: var(--transition);
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .nav-links a:hover, .nav-links button:hover {
-            color: var(--primary-green);
-        }
-
-        .btn-cta {
-            background-color: var(--primary-green);
-            color: var(--white);
-            padding: 12px 26px;
-            border-radius: 30px;
-            font-weight: 700;
-            transition: var(--transition);
-            display: inline-block;
-            box-shadow: 0 4px 12px rgba(44, 94, 59, 0.25);
-        }
-
-        .btn-cta:hover {
-            background-color: var(--secondary-green);
-            transform: translateY(-2px);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            padding: 70px 0 50px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 42px;
-            line-height: 1.25;
-            color: var(--primary-green);
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-        }
-
-        .hero-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            object-fit: cover;
-            max-height: 420px;
-        }
-
-        /* FEATURES / BENEFITS */
-        .features {
-            padding: 60px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 32px;
-            color: var(--primary-green);
-            font-weight: 700;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            margin-top: 8px;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: var(--primary-green);
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 15px;
-        }
-
-        /* FOOD GUIDE TABLE SECTION */
-        .food-guide {
-            padding: 60px 0;
-            background: #F4F8F5;
-            border-radius: 24px;
-            margin: 40px 0;
-        }
-
-        .guide-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            padding: 0 30px;
-        }
-
-        .guide-box {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-        }
-
-        .guide-box h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--border-color);
-        }
-
-        .guide-box.eat h3 { color: var(--primary-green); border-color: var(--primary-green); }
-        .guide-box.limit h3 { color: #C0392B; border-color: #C0392B; }
-
-        .guide-box ul {
-            list-style: none;
-        }
-
-        .guide-box ul li {
-            padding: 8px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 15px;
-            color: var(--text-dark);
-        }
-
-        /* MEAL PLAN SAMPLE SECTION */
-        .sample-plan {
-            padding: 60px 0;
-        }
-
-        .plan-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-
-        .plan-card {
-            background: var(--white);
-            border-radius: 14px;
-            padding: 20px;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow);
-        }
-
-        .plan-card h4 {
-            color: var(--accent-olive);
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .plan-card p {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-
-        /* FAQ ACCORDION SECTION */
-        .faq-section {
-            padding: 60px 0;
-        }
-
-        .faq-item {
-            background: var(--white);
-            border-radius: 12px;
-            margin-bottom: 15px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: 20px;
-            text-align: left;
-            background: none;
-            border: none;
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--primary-green);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-answer {
-            padding: 0 20px 20px 20px;
-            display: none;
-            color: var(--text-muted);
-            font-size: 15px;
-        }
-
-        /* BANNER CTA */
-        .banner {
-            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-            color: var(--white);
-            padding: 60px 40px;
-            border-radius: 24px;
-            text-align: center;
-            margin: 60px 0;
-        }
-
-        .banner h2 {
-            font-size: 34px;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .banner p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .banner .btn-cta {
-            background-color: #A3E635;
-            color: #112A18;
-            font-size: 18px;
-            padding: 14px 32px;
-        }
-
-        .banner .btn-cta:hover {
-            background-color: #86EFAC;
-        }
-
-        /* MOBILE STICKY CTA */
-        .sticky-mobile-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: var(--white);
-            padding: 12px 20px;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
-            z-index: 1500;
-            text-align: center;
-            display: none;
-        }
-
-        .sticky-mobile-cta .btn-cta {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--white);
-            border-top: 1px solid var(--border-color);
-            padding: 40px 0 20px;
-            margin-top: 60px;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
-        .footer-links button {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            font-size: 14px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .footer-links button:hover {
-            color: var(--primary-green);
-        }
-
-        .copyright {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-top: 20px;
-        }
-
-        /* MODAL POPUPS FOR PAGES */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal-content {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 16px;
-            max-width: 600px;
-            width: 100%;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: var(--shadow);
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--text-muted);
-            cursor: pointer;
-        }
-
-        .close-btn:hover {
-            color: var(--text-dark);
-        }
-
-        .modal-content h2 {
-            color: var(--primary-green);
-            margin-bottom: 15px;
-        }
-
-        .modal-content p {
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            font-size: 15px;
-        }
-
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-text h1 {
-                font-size: 32px;
-            }
-            .guide-grid {
-                grid-template-columns: 1fr;
-                padding: 0 15px;
-            }
-            .nav-links {
-                display: none;
-            }
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .sticky-mobile-cta {
-                display: block;
-            }
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .article-card { flex-direction: column; }
+            .article-card-img { height: 200px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="top-notice">
-        🔥 <strong>Special Offer:</strong> Get the Official Mediterranean Custom Plan & Shopping Guide Today! 
-        <a href="https://b1093z397t2w5r38j-voui5x1s.hop.clickbank.net" target="_blank">Get Access Now &rarr;</a>
-    </div>
+<header>
+    <a href="index.html" class="logo">Mediterranean Diet</a>
+</header>
 
-    <!-- NAVIGATION HEADER -->
-    <header>
-        <div class="container navbar">
-            <a href="#" class="logo">🌿 MedDiet Guide</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#food-guide">Food Guide</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><button onclick="openModal('privacyModal')">Privacy Policy</button></li>
-            </ul>
-            <a href="https://b1093z397t2w5r38j-voui5x1s.hop.clickbank.net" target="_blank" class="btn-cta">Get Custom Plan</a>
-        </div>
-    </header>
+<div class="hero">
+    <h1>Your Guide to Healthy & Sustainable Mediterranean Living</h1>
+    <p>Discover nutritious recipes, flexible daily meal plans, and science-backed benefits to transform your health.</p>
+</div>
 
-    <!-- HERO SECTION -->
-    <section class="container hero" id="about">
-        <div class="hero-text">
-            <h1>Transform Your Health with the Mediterranean Lifestyle</h1>
-            <p>Discover the science-backed power of clean eating, fresh whole foods, heart-healthy fats, and sustainable weight control without restrictive calorie counting.</p>
-            <a href="https://b1093z397t2w5r38j-voui5x1s.hop.clickbank.net" target="_blank" class="btn-cta">Start Your Transformation</a>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Fresh Mediterranean Food Bowl">
-        </div>
-    </section>
+<div class="container">
 
-    <!-- FEATURES & BENEFITS -->
-    <section class="container features" id="benefits">
-        <div class="section-title">
-            <h2>Proven Health Benefits</h2>
-            <p>Why nutrition experts rank the Mediterranean diet #1 worldwide year after year.</p>
-        </div>
-        <div class="grid-3">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80" alt="Healthy Heart Foods">
-                <h3>Optimal Heart Health</h3>
-                <p>Rich in extra virgin olive oil, wild fish, and healthy omega-3 fatty acids that maintain healthy cholesterol levels and blood pressure.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Fresh Salad Dish">
-                <h3>Natural Weight Loss</h3>
-                <p>Focuses on high-fiber vegetables, legumes, and nutrient-dense whole foods that promote fullness without intense cravings.</p>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Nutritious Vegetables and Grains">
-                <h3>Sustained Daily Energy</h3>
-                <p>Complex carbohydrates, extra virgin olive oil, and lean proteins stabilize glucose levels, preventing afternoon energy crashes.</p>
-            </div>
-        </div>
-    </section>
+    <h2 class="section-title">Latest Guides & Articles</h2>
 
-    <!-- NEW FOOD GUIDE SECTION -->
-    <section class="container food-guide" id="food-guide">
-        <div class="section-title">
-            <h2>Mediterranean Food Guide</h2>
-            <p>Simple guidelines on what to focus on and what to reduce.</p>
+    <!-- FEATURED ARTICLE CARD -->
+    <div class="article-card">
+        <div class="article-card-img">
+            <img src="https://storage.googleapis.com/48877118-7272-4a4d-b302-0465d8aa4548/c76c0336-af49-4cb3-a17c-9c5fb2f71eb1/98c431e7-bf9e-4abd-bbaa-c6aca9a3c11e.jpg" alt="Mediterranean Diet Guide">
         </div>
-        <div class="guide-grid">
-            <div class="guide-box eat">
-                <h3>✅ Eat Frequently</h3>
-                <ul>
-                    <li>🥗 Vegetables: Tomatoes, spinach, kale, cucumbers, broccoli</li>
-                    <li>🥑 Healthy Fats: Extra virgin olive oil, avocados, olives</li>
-                    <li>🌰 Nuts & Seeds: Almonds, walnuts, chia seeds, sunflower seeds</li>
-                    <li>🐟 Seafood: Salmon, tuna, sardines, mackerel</li>
-                    <li>🌾 Whole Grains: Quinoa, brown rice, oats, whole wheat</li>
-                </ul>
+        <div class="article-card-content">
+            <span class="article-tag">Featured Complete Guide</span>
+            <h2>How to Follow the Mediterranean Diet for a Healthier Life</h2>
+            <p>Adopting a fresh approach to your meals can transform your daily energy levels. Learn core eating principles, healthy food lists, and practical steps to start today.</p>
+            <div>
+                <a href="mediterranean-diet-guide.html" class="btn-read">Read Full Article &rarr;</a>
             </div>
-            <div class="guide-box limit">
-                <h3>❌ Limit or Avoid</h3>
-                <ul>
-                    <li>🥤 Added Sugars: Soda, candies, commercial sweets</li>
-                    <li>🍔 Refined Grains: White bread, refined pasta, white flour</li>
-                    <li>🥓 Trans Fats & Margarine: Processed oils and shortenings</li>
-                    <li>🌭 Processed Meats: Hot dogs, sausages, deli meats</li>
-                    <li>🥫 Ultra-Processed Foods: Meals with synthetic additives</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW SAMPLE MEAL PLAN SECTION -->
-    <section class="container sample-plan">
-        <div class="section-title">
-            <h2>Daily Meal Plan Overview</h2>
-            <p>A sneak peek at how tasty and effortless your meal routine can be.</p>
-        </div>
-        <div class="plan-cards">
-            <div class="plan-card">
-                <h4>🌅 Breakfast</h4>
-                <p>Greek yogurt topped with fresh blueberries, chia seeds, and a drizzle of raw honey.</p>
-            </div>
-            <div class="plan-card">
-                <h4>☀️ Lunch</h4>
-                <p>Mediterranean quinoa bowl with grilled chicken, cucumbers, olives, feta, and olive oil.</p>
-            </div>
-            <div class="plan-card">
-                <h4>🌙 Dinner</h4>
-                <p>Pan-seared salmon served with roasted garlic asparagus and sweet potatoes.</p>
-            </div>
-            <div class="plan-card">
-                <h4>🍏 Snacks</h4>
-                <p>Handful of walnuts, fresh fruit slices, or hummus with crisp carrot sticks.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW FAQ SECTION -->
-    <section class="container faq-section" id="faq">
-        <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-            <p>Get answers to common queries about starting the Mediterranean diet.</p>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-                Is the Mediterranean diet expensive to maintain?
-                <span>+</span>
-            </button>
-            <div class="faq-answer">
-                No! The core of the diet relies on affordable staples like legumes, seasonal vegetables, whole grains, canned fish, and olive oil.
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-                Can I follow this diet if I am vegetarian or vegan?
-                <span>+</span>
-            </button>
-            <div class="faq-answer">
-                Absolutely. The Mediterranean diet is heavily plant-focused. You can easily substitute fish and poultry with beans, lentils, chickpeas, and tofu.
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)">
-                How fast can I see results?
-                <span>+</span>
-            </button>
-            <div class="faq-answer">
-                Most individuals report noticeable improvements in energy, digestion, and appetite control within the first 7 to 14 days.
-            </div>
-        </div>
-    </section>
-
-    <!-- PROMOTIONAL BANNER CTA -->
-    <section class="container">
-        <div class="banner">
-            <h2>Get Your Complete Custom Meal Plan Today</h2>
-            <p>Unlock hundreds of delicious recipes, grocery lists, and step-by-step guidance designed specifically for your body and goals.</p>
-            <a href="https://b1093z397t2w5r38j-voui5x1s.hop.clickbank.net" target="_blank" class="btn-cta">Download Full Plan & Recipes &rarr;</a>
-        </div>
-    </section>
-
-    <!-- STICKY MOBILE CTA BAR -->
-    <div class="sticky-mobile-cta">
-        <a href="https://b1093z397t2w5r38j-voui5x1s.hop.clickbank.net" target="_blank" class="btn-cta">👉 Get Your Mediterranean Plan</a>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container footer-content">
-            <div class="logo">🌿 MedDiet Guide</div>
-            <ul class="footer-links">
-                <li><button onclick="openModal('privacyModal')">Privacy Policy</button></li>
-                <li><button onclick="openModal('termsModal')">Terms of Service</button></li>
-                <li><button onclick="openModal('disclaimerModal')">Medical Disclaimer</button></li>
-            </ul>
-        </div>
-        <div class="copyright">
-            &copy; 2026 MedDiet Guide. All rights reserved.
-        </div>
-    </footer>
-
-    <!-- MODAL POPUPS CODE -->
-    <div id="privacyModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('privacyModal')">&times;</span>
-            <h2>Privacy Policy</h2>
-            <p>Your privacy is important to us. We do not collect personal identification information unless voluntarily provided. Any information shared with us is kept strictly confidential and used solely to enhance your user experience.</p>
-            <p>We do not sell, trade, or rent personal identification information to third parties.</p>
         </div>
     </div>
 
-    <div id="termsModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('termsModal')">&times;</span>
-            <h2>Terms of Service</h2>
-            <p>By accessing this website, you agree to be bound by these website Terms and Conditions of Use and agree that you are responsible for compliance with any applicable local laws.</p>
-            <p>The materials contained in this website are protected by applicable copyright and trademark law.</p>
-        </div>
+    <!-- PROMOTIONAL CTA BANNER -->
+    <div class="cta-box">
+        <h3>Ready to Transform Your Health & Lifestyle?</h3>
+        <p>Get your custom Mediterranean Diet plan tailored for weight loss, rapid results, and sustainable daily living.</p>
+        <a href="https://2608f9rh9z7y0u7ci4kifbtr6h.hop.clickbank.net" target="_blank" class="btn-cta">👉 Claim Your Custom Mediterranean Plan Now</a>
     </div>
 
-    <div id="disclaimerModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('disclaimerModal')">&times;</span>
-            <h2>Medical Disclaimer</h2>
-            <p>The content provided on this website is for educational and informational purposes only and is not intended as medical advice. Always consult a qualified physician or healthcare professional regarding any medical condition or dietary changes.</p>
-        </div>
-    </div>
+</div>
 
-    <!-- JAVASCRIPT FOR MODALS & FAQ ACCORDION -->
-    <script>
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'flex';
-        }
+<footer>
+    <p>&copy; 2026 Mediterranean Diet Guide. All rights reserved.</p>
+</footer>
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
-
-        function toggleFaq(button) {
-            const answer = button.nextElementSibling;
-            const icon = button.querySelector('span');
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-                icon.textContent = "+";
-            } else {
-                answer.style.display = "block";
-                icon.textContent = "-";
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
-        }
-    </script>
 </body>
 </html>
