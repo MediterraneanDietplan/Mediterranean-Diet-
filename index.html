@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mediterranean Diet - Healthy Meal Plans & Recipes</title>
+    <title>Mediterranean Diet - Healthy Meal Plans & Guide</title>
     <meta name="description" content="Discover healthy Mediterranean diet recipes, complete meal plans, food guides, and tips for weight loss and long-term vitality.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -22,32 +22,45 @@
         header { background: var(--white); border-bottom: 1px solid #EAEAEA; padding: 20px 0; text-align: center; }
         .logo { color: var(--primary-green); font-size: 24px; font-weight: 800; text-decoration: none; }
 
-        .hero { text-align: center; padding: 60px 20px 40px; max-width: 800px; margin: 0 auto; }
+        .hero { text-align: center; padding: 50px 20px 30px; max-width: 800px; margin: 0 auto; }
         .hero h1 { color: var(--primary-green); font-size: 36px; font-weight: 800; margin-bottom: 15px; line-height: 1.3; }
         .hero p { color: var(--text-muted); font-size: 18px; margin-bottom: 25px; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px 50px; }
+
+        /* General Content Styles */
+        h2 { color: var(--primary-green); font-size: 26px; margin: 40px 0 15px; border-bottom: 2px solid #F0EAE1; padding-bottom: 8px; }
+        h3 { color: #333; font-size: 20px; margin: 25px 0 10px; }
+        p { margin-bottom: 18px; color: #4A4A4A; }
+        ul { margin: 15px 0 20px 25px; }
+        li { margin-bottom: 8px; }
 
         /* Article Card Section */
         .section-title { color: var(--primary-green); font-size: 28px; margin: 40px 0 25px; text-align: center; font-weight: 700; }
         
-        .article-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #EAEAEA; display: flex; flex-wrap: wrap; margin-bottom: 50px; }
+        .article-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #EAEAEA; display: flex; flex-wrap: wrap; margin: 30px 0 40px; }
         .article-card-img { flex: 1 1 300px; max-height: 320px; overflow: hidden; }
         .article-card-img img { width: 100%; height: 100%; object-fit: cover; }
-        .article-card-content { flex: 2 1 400px; padding: 35px; display: flex; flex-direction: column; justify-content: center; }
+        .article-card-content { flex: 2 1 400px; padding: 30px; display: flex; flex-direction: column; justify-content: center; }
         .article-tag { color: var(--accent-gold); font-weight: 700; font-size: 13px; text-transform: uppercase; margin-bottom: 10px; }
-        .article-card h2 { color: var(--primary-green); font-size: 24px; margin-bottom: 12px; line-height: 1.4; border: none; padding: 0; }
+        .article-card h3 { color: var(--primary-green); font-size: 22px; margin-bottom: 12px; line-height: 1.4; border: none; padding: 0; }
         .article-card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
         .btn-read { display: inline-block; background: var(--primary-green); color: var(--white); padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 14px; transition: background 0.2s; }
         .btn-read:hover { background: #1E4329; }
 
         /* CTA Section */
-        .cta-box { background: linear-gradient(135deg, #2C5E3B 0%, #1E4329 100%); color: var(--white); padding: 40px 20px; border-radius: 20px; text-align: center; margin: 40px 0 60px; }
+        .cta-box { background: linear-gradient(135deg, #2C5E3B 0%, #1E4329 100%); color: var(--white); padding: 35px 20px; border-radius: 20px; text-align: center; margin: 40px 0; }
         .cta-box h3 { color: var(--white); margin-bottom: 12px; font-size: 24px; }
         .cta-box p { color: #E0E0E0; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto; }
         .btn-cta { display: inline-block; background: var(--accent-gold); color: #000; font-weight: 700; padding: 16px 32px; border-radius: 30px; text-decoration: none; text-transform: uppercase; font-size: 15px; }
+        .btn-cta:hover { transform: translateY(-2px); }
 
-        footer { text-align: center; padding: 30px 20px; color: var(--text-muted); border-top: 1px solid #EAEAEA; font-size: 14px; }
+        /* Table */
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: #FFF; border-radius: 8px; overflow: hidden; border: 1px solid #E0E0E0; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #EEE; }
+        th { background-color: var(--primary-green); color: #FFF; font-weight: 600; }
+
+        footer { text-align: center; padding: 30px 20px; color: var(--text-muted); border-top: 1px solid #EAEAEA; font-size: 14px; background: #fff; }
 
         @media(max-width: 768px) {
             .hero h1 { font-size: 28px; }
@@ -63,22 +76,22 @@
 </header>
 
 <div class="hero">
-    <h1>Your Guide to Healthy & Sustainable Mediterranean Living</h1>
-    <p>Discover nutritious recipes, flexible daily meal plans, and science-backed benefits to transform your health.</p>
+    <h1>Your Complete Guide to Healthy Mediterranean Living</h1>
+    <p>Discover nutrient-rich recipes, flexible daily meal plans, and science-backed strategies for long-term health.</p>
 </div>
 
 <div class="container">
 
-    <h2 class="section-title">Latest Guides & Articles</h2>
+    <!-- FEATURED ARTICLE SECTION -->
+    <h2 class="section-title">Featured Guide & Article</h2>
 
-    <!-- FEATURED ARTICLE CARD -->
     <div class="article-card">
         <div class="article-card-img">
             <img src="https://storage.googleapis.com/48877118-7272-4a4d-b302-0465d8aa4548/c76c0336-af49-4cb3-a17c-9c5fb2f71eb1/98c431e7-bf9e-4abd-bbaa-c6aca9a3c11e.jpg" alt="Mediterranean Diet Guide">
         </div>
         <div class="article-card-content">
-            <span class="article-tag">Featured Complete Guide</span>
-            <h2>How to Follow the Mediterranean Diet for a Healthier Life</h2>
+            <span class="article-tag">Complete Master Guide</span>
+            <h3>How to Follow the Mediterranean Diet for a Healthier Life</h3>
             <p>Adopting a fresh approach to your meals can transform your daily energy levels. Learn core eating principles, healthy food lists, and practical steps to start today.</p>
             <div>
                 <a href="mediterranean-diet-guide.html" class="btn-read">Read Full Article &rarr;</a>
@@ -86,11 +99,53 @@
         </div>
     </div>
 
-    <!-- PROMOTIONAL CTA BANNER -->
+    <!-- PROMOTIONAL CTA BANNER 1 -->
     <div class="cta-box">
         <h3>Ready to Transform Your Health & Lifestyle?</h3>
         <p>Get your custom Mediterranean Diet plan tailored for weight loss, rapid results, and sustainable daily living.</p>
         <a href="https://2608f9rh9z7y0u7ci4kifbtr6h.hop.clickbank.net" target="_blank" class="btn-cta">👉 Claim Your Custom Mediterranean Plan Now</a>
+    </div>
+
+    <!-- MAIN HOMEPAGE CONTENT -->
+    <h2>Core Pillars of the Mediterranean Diet</h2>
+    <p>The Mediterranean diet is more than a short-term meal plan; it is a heart-healthy lifestyle centered around high-quality whole foods, fresh vegetables, healthy fats, and shared meals.</p>
+    
+    <ul>
+        <li><strong>Healthy Fats:</strong> Extra-virgin olive oil is used as the primary cooking oil and salad dressing base.</li>
+        <li><strong>Plant-Based Staples:</strong> Vegetables, legumes, nuts, seeds, and whole grains form the majority of every meal.</li>
+        <li><strong>Moderate Seafood & Poultry:</strong> Fish rich in Omega-3 fatty acids (like salmon and sardines) are consumed at least twice a week.</li>
+        <li><strong>Limited Processed Foods:</strong> Refined sugars, sodium, and heavily processed snacks are kept to a minimum.</li>
+    </ul>
+
+    <h2>Sample Weekly Meal Breakdown</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Meal</th>
+                <th>Suggested Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Breakfast</strong></td>
+                <td>Greek yogurt with honey and chia seeds, or oatmeal topped with fresh berries.</td>
+            </tr>
+            <tr>
+                <td><strong>Lunch</strong></td>
+                <td>Mediterranean chickpea salad with cucumbers, feta cheese, and extra-virgin olive oil.</td>
+            </tr>
+            <tr>
+                <td><strong>Dinner</strong></td>
+                <td>Baked lemon salmon with roasted asparagus and a side of quinoa or farro.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- PROMOTIONAL CTA BANNER 2 -->
+    <div class="cta-box">
+        <h3>Get Started Today with Instant Meal Plans</h3>
+        <p>Access step-by-step Mediterranean recipes, grocery shopping lists, and expert-crafted guides.</p>
+        <a href="https://2608f9rh9z7y0u7ci4kifbtr6h.hop.clickbank.net" target="_blank" class="btn-cta">👉 Visit Official Mediterranean Diet Website</a>
     </div>
 
 </div>
